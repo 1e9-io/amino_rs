@@ -13,9 +13,10 @@ use std::io::{self, Read, Write};
 use bytes::{ByteOrder, LittleEndian};
 use prost::Message;
 
-use tests::protobuf_test_messages::proto2::TestAllTypesProto2;
-use tests::protobuf_test_messages::proto3::TestAllTypesProto3;
-use tests::{roundtrip, RoundtripResult};
+use tests::{
+    protobuf_test_messages::{proto2::TestAllTypesProto2, proto3::TestAllTypesProto3},
+    roundtrip, RoundtripResult,
+};
 
 fn main() {
     env_logger::init();

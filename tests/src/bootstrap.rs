@@ -1,8 +1,8 @@
-use std::env;
-use std::fs;
-use std::io::Read;
-use std::io::Write;
-use std::path::Path;
+use std::{
+    env, fs,
+    io::{Read, Write},
+    path::Path,
+};
 
 use prost_build;
 use tempdir;

@@ -12,9 +12,7 @@
 #[macro_use]
 extern crate prost_amino_derive;
 
-use std::i32;
-use std::i64;
-use std::time;
+use std::{i32, i64, time};
 
 include!("protobuf.rs");
 pub mod compiler {

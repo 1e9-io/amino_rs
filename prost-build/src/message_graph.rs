@@ -1,8 +1,6 @@
 use std::collections::HashMap;
 
-use petgraph::algo::has_path_connecting;
-use petgraph::graph::NodeIndex;
-use petgraph::Graph;
+use petgraph::{algo::has_path_connecting, graph::NodeIndex, Graph};
 
 use prost_types::{field_descriptor_proto, DescriptorProto, FileDescriptorProto};
 

@@ -18,10 +18,9 @@ use itertools::Itertools;
 use proc_macro::TokenStream;
 use proc_macro2::Span;
 use sha2::{Digest, Sha256};
-use syn::punctuated::Punctuated;
 use syn::{
-    Data, DataEnum, DataStruct, DeriveInput, Expr, Fields, FieldsNamed, FieldsUnnamed, Ident,
-    Variant,
+    punctuated::Punctuated, Data, DataEnum, DataStruct, DeriveInput, Expr, Fields, FieldsNamed,
+    FieldsUnnamed, Ident, Variant,
 };
 
 mod field;

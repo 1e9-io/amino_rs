@@ -127,13 +127,13 @@ mod code_generator;
 mod ident;
 mod message_graph;
 
-use std::collections::HashMap;
-use std::default;
-use std::env;
-use std::fs;
-use std::io::{Error, ErrorKind, Read, Result, Write};
-use std::path::{Path, PathBuf};
-use std::process::Command;
+use std::{
+    collections::HashMap,
+    default, env, fs,
+    io::{Error, ErrorKind, Read, Result, Write},
+    path::{Path, PathBuf},
+    process::Command,
+};
 
 use prost::Message;
 use prost_types::{FileDescriptorProto, FileDescriptorSet};

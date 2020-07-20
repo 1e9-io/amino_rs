@@ -1,5 +1,4 @@
-use std::fmt::Debug;
-use std::usize;
+use std::{fmt::Debug, usize};
 
 use bytes::{Buf, BufMut};
 
@@ -7,6 +6,7 @@ use DecodeError;
 use EncodeError;
 
 use crate::encoding::{encode_varint, encoded_len_varint, message, WireType};
+
 /// A Protocol Buffers message.
 pub trait Message: Debug + Send + Sync {
     /// Encodes the message to a buffer.
