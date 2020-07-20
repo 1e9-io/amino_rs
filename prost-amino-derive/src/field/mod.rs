@@ -3,8 +3,7 @@ mod message;
 mod oneof;
 mod scalar;
 
-use std::fmt;
-use std::slice;
+use std::{fmt, slice};
 
 use failure::Error;
 use proc_macro2::TokenStream;

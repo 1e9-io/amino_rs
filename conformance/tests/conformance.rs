@@ -1,5 +1,4 @@
-use std::env;
-use std::process::Command;
+use std::{env, process::Command};
 
 /// Runs the protobuf conformance test. This must be done in an integration test
 /// so that Cargo will build the proto-conformance binary.

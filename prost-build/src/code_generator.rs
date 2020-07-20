@@ -1,12 +1,14 @@
-use std::ascii;
-use std::borrow::Cow;
-use std::collections::{HashMap, HashSet};
+use std::{
+    ascii,
+    borrow::Cow,
+    collections::{HashMap, HashSet},
+};
 
 use itertools::{Either, Itertools};
 use multimap::MultiMap;
-use prost_types::field_descriptor_proto::{Label, Type};
-use prost_types::source_code_info::Location;
 use prost_types::{
+    field_descriptor_proto::{Label, Type},
+    source_code_info::Location,
     DescriptorProto, EnumDescriptorProto, EnumValueDescriptorProto, FieldDescriptorProto,
     FileDescriptorProto, OneofDescriptorProto, ServiceDescriptorProto, SourceCodeInfo,
 };
