@@ -18,10 +18,9 @@ use itertools::Itertools;
 use proc_macro::TokenStream;
 use proc_macro2::Span;
 use sha2::{Digest, Sha256};
-use syn::punctuated::Punctuated;
 use syn::{
-    Data, DataEnum, DataStruct, DeriveInput, Expr, Fields, FieldsNamed, FieldsUnnamed, Ident,
-    Variant,
+    punctuated::Punctuated, Data, DataEnum, DataStruct, DeriveInput, Expr, Fields, FieldsNamed,
+    FieldsUnnamed, Ident, Variant,
 };
 
 mod field;
@@ -257,14 +256,6 @@ fn try_message(input: TokenStream) -> Result<TokenStream, Error> {
             impl _prost::Message for #ident {
                 #[allow(unused_variables)]
                 fn encode_raw<B>(&self, buf: &mut B) where B: _prost::bytes::BufMut  {
-                    if #is_registered {
-                        // TODO: in go-amino this only get length-prefixed if MarhsalBinary is used
-                        // opposed to MarshalBinaryBare
-                        let len = 4 #(+ #encoded_len2)*;
-                        _prost::encoding::encode_varint(len as u64, buf);
-                    } else {
-                        // not length prefixed!
-                    }
                     #comp_prefix
                     #(#encode)*
                 }

@@ -16,8 +16,7 @@
 
 extern crate which;
 
-use std::env;
-use std::path::PathBuf;
+use std::{env, path::PathBuf};
 
 /// Returns the path to the location of the bundled Protobuf artifacts.
 fn bundle_path() -> PathBuf {
